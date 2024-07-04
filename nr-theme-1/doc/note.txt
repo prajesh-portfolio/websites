@@ -1,0 +1,5 @@
+nr-theme-1 
+
+Figma: https://www.figma.com/design/pYdjkp0eFPr9F6rMiV5prK/nr-admin-theme?node-id=1-2&t=HJU0f1yR35tcYQTo-1
+
+Live: https://web2.anasource.com/design/prajesh/nr-theme-1/index.html

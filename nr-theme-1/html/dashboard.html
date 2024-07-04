@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Start Header -->
+		<header class="header">
+			<div class="header-left">
+				<div class="hamburger" id="hamburger">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</div>
+				<a href="index.html" title="" class="logo">
+					<img src="images/logo-lg.svg" alt="">
+				</a>
+			</div>
+			<div class="header-right">
+				<button class="btn btn-ic"><img src="images/ic-search.svg" alt=""></button>
+				<button class="btn btn-ic"><img src="images/ic-notifications.svg" alt=""></button>
+				<button class="btn btn-ic"><img src="images/ic-mail.svg" alt=""></button>
+				<div class="dropdown">
+					<div class="profile-block dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						<em><img src="./images/dp.png" alt=""></em>
+						<div class="profile-info">
+							<h6>John Doe</h6>
+							<span>Admin</span>
+						</div>
+					</div>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Profile</a></li>
+						<li><a class="dropdown-item" href="#">Settings</a></li>
+						<li><a class="dropdown-item" href="./index.html">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!-- End Header -->
+		<div class="dropover"></div>
+		<!-- Main Navigation -->
+		<nav class="main-navigation">
+			<a href="#" title="Company Name" class="logo"><img src="./images/logo-lg-white.svg"></a>
+			<ul>
+				<li><a href="#" title="Lorem ipsum." class="active"><em><img src="./images/ic-dashboard.svg"
+								alt=""></em><span class="item-name">Dashboard</span></a>
+				</li>
+				<li><a href="./innerpage.html" title="Lorem ipsum."><em><img src="./images/ic-project.svg"
+								alt=""></em><span class="item-name">Projects</span></a>
+				</li>
+				<li><a href="#" title="Lorem ipsum."><em><img src="./images/ic-staticstic.svg" alt=""></em><span
+							class="item-name">Statistics</span></a></li>
+				<li><a href="#" title="Lorem ipsum."><em><img src="./images/ic-mail-white.svg" alt=""></em><span
+							class="item-name">Mail</span></a></li>
+				<li><a href="#" title="Lorem ipsum."><em><img src="./images/ic-report.svg" alt=""></em><span
+							class="item-name">Reports</span></a></li>
+				<li><a href="#" title="Lorem ipsum."><em><img src="./images/ic-help.svg" alt=""></em><span
+							class="item-name">Help</span></a></li>
+				<li><a href="#" title="Lorem ipsum."><em><img src="./images/ic-setting.svg" alt=""></em><span
+							class="item-name">Settings</span></a>
+				</li>
+			</ul>
+		</nav>
+		<!-- End Main Navigation -->
+
+		<!-- Main Content -->
+		<main class="main-content">
+			<div class="title">Dashboard</div>
+			<div class="row g-30px count-cards">
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="count-card">
+						<em><img src="./images/ic-briefcase.svg"></em>
+						<div class="count-info">
+							<strong>35</strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="count-card red">
+						<em><img src="./images/ic-user-rounded.svg"></em>
+						<div class="count-info">
+							<strong>12</strong>
+							<span>New Leads</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="count-card success">
+						<em><img src="./images/ic-document.svg"></em>
+						<div class="count-info">
+							<strong>10</strong>
+							<span>Proposals</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="count-card warn">
+						<em><img src="./images/ic-time.svg"></em>
+						<div class="count-info">
+							<strong>186</strong>
+							<span>total Hours</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row g-30px">
+				<div class="col-12 col-md-6 col-lg-7">
+					<div class="card">
+						<div class="card-title">
+							<h6 class="p-0">Active Projects</h6>
+							<ul class="legends">
+								<li class="np">
+									No. of Project
+								</li>
+								<li class="ap">
+									Active Project
+								</li>
+							</ul>
+						</div>
+						<div class="card-body">
+							<div class="chart-wrapper">
+								<canvas id="bar-chart"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-5">
+					<div class="card">
+						<div class="card-title">
+							<h6 class="p-0">Project Status</h6>
+						</div>
+						<div class="card-body">
+							<div class="chart-wrapper">
+								<canvas id="doughnut-chart"></canvas>
+							</div>
+							<div class="doughnut-chart-count">285 <span>Total Projects</span></div>
+							<ul class="legends">
+								<li class="pn">
+									Pending
+								</li>
+								<li class="in">
+									In Progress
+								</li>
+								<li class="com">
+									Completed
+								</li>
+								<li class="can">
+									Cancelled
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6">
+					<div class="card">
+						<div class="card-title">
+							<h6 class="p-0">My Tasks</h6>
+							<select class="select no-search sm-select ">
+								<option selected>All Tasks</option>
+								<option value="1">Pending</option>
+								<option value="2">In progress</option>
+								<option value="3">Complated</option>
+							</select>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Deadline</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="tb-ch-1">
+													<label class="form-check-label" for="tb-ch-1">
+														Lorem Ipsum is dummy text.
+													</label>
+												</div>
+											</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status red">Pending</span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="tb-ch-2">
+													<label class="form-check-label" for="tb-ch-2">
+														Lorem Ipsum is dummy text.
+													</label>
+												</div>
+											</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status warn">In Progress</span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check complated">
+													<input class="form-check-input" type="checkbox" value=""
+														id="tb-ch-3" checked>
+													<label class="form-check-label" for="tb-ch-3">
+														Lorem Ipsum is dummy text.
+													</label>
+												</div>
+											</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status">Complated</span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="tb-ch-3">
+													<label class="form-check-label" for="tb-ch-3">
+														Lorem Ipsum is dummy text.
+													</label>
+												</div>
+											</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status warn">In Progress</span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="tb-ch-3">
+													<label class="form-check-label" for="tb-ch-3">
+														Lorem Ipsum is dummy text.
+													</label>
+												</div>
+											</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status red">Pending</span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="tb-ch-3">
+													<label class="form-check-label" for="tb-ch-3">
+														Lorem Ipsum is dummy text.
+													</label>
+												</div>
+											</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status warn">In Progress</span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check complated">
+													<input class="form-check-input" type="checkbox" value=""
+														id="tb-ch-3" checked>
+													<label class="form-check-label" for="tb-ch-3">
+														Lorem Ipsum is dummy text.
+													</label>
+												</div>
+											</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status">Complated</span></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check complated">
+													<input class="form-check-input" type="checkbox" value=""
+														id="tb-ch-3" checked>
+													<label class="form-check-label" for="tb-ch-3">
+														Lorem Ipsum is dummy text.
+													</label>
+												</div>
+											</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status">Complated</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6">
+					<div class="card">
+						<div class="card-title">
+							<h6 class="p-0">My Project</h6>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Project</th>
+											<th>Due date</th>
+											<th>Status</th>
+											<th>Hours</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Chat Application</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status red">Pending</span></td>
+											<td>150 hrs</td>
+										</tr>
+										<tr>
+											<td>Brand - Logo Design</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status warn">In Progress</span></td>
+											<td>150 hrs</td>
+										</tr>
+										<tr>
+											<td>Brand - Logo Design</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status">Complated</span></td>
+											<td>150 hrs</td>
+										</tr>
+										<tr>
+											<td>Chat Application</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status warn">In Progress</span></td>
+											<td>150 hrs</td>
+										</tr>
+										<tr>
+											<td>Landing Page -1</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status warn">In Progress</span></td>
+											<td>150 hrs</td>
+										</tr>
+										<tr>
+											<td>Landing Page -2</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status red">Pending</span></td>
+											<td>150 hrs</td>
+										</tr>
+										<tr>
+											<td>Redesign - Application</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status">Complated</span></td>
+											<td>150 hrs</td>
+										</tr>
+										<tr>
+											<td>Admin Theme</td>
+											<td>12 Sep, 2022</td>
+											<td><span class="status red">Pending</span></td>
+											<td>150 hrs</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- End Main Content -->
+	</div>
+
+	<!-- Start Footer -->
+	<footer class="footer">
+		&copy;2022 Company. All rights reserved.
+	</footer>
+	<!-- End Footer -->
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
